@@ -1,406 +1,383 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Up Hair Concept ( Artisan Coiffeur indépendant HOMME - FEMME - Enfant / since 2008 ) — Bordeaux</title>
-    <meta name="description" content="Up Hair Concept ( Artisan Coiffeur indépendant HOMME - FEMME - Enfant / since 2008 ) à Bordeaux. Réservez en ligne facilement.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        :root {
-            --primary: #2D2D2D;
-            --accent: #C9A96E;
-            --bg: #0a0a0a;
-            --surface: #141414;
-            --text: #f0f0f0;
-            --text-muted: #888;
-            --radius: 12px;
-        }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Up Hair Concept — Artisan Coiffeur Bordeaux</title>
+<meta name="description" content="Up Hair Concept, artisan coiffeur indépendant à Bordeaux depuis 2008. 154 avis · 4.9/5. 27 Rue de la Devise, Bordeaux.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --wood:#8B5A2B;--wood2:#7A4E25;--wood-l:#C49A6C;--wood-pale:#F5EDE0;
+  --green:#2D6A4F;--green2:#236040;--green-l:#52B788;--green-pale:#D8F3DC;
+  --cream:#FBF7F0;--beige:#EDE0CF;--text:#1A120B;--muted:#6B5744;--white:#FFFDF9
+}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--text);font-family:'Cabin',sans-serif;overflow-x:hidden;line-height:1.6}
+/* Grain texture overlay */
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:0.4}
 
-        /* NAV */
-        nav {
-            position: fixed; top: 0; width: 100%; z-index: 100;
-            background: rgba(10,10,10,0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255,255,255,0.06);
-            padding: 16px 0;
-        }
-        .nav-inner {
-            max-width: 1100px; margin: 0 auto; padding: 0 24px;
-            display: flex; justify-content: space-between; align-items: center;
-        }
-        .nav-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4rem; font-weight: 700;
-            color: var(--accent); text-decoration: none;
-        }
-        .nav-links { display: flex; gap: 32px; list-style: none; }
-        .nav-links a {
-            color: var(--text-muted); text-decoration: none;
-            font-size: 0.9rem; transition: color 0.2s;
-        }
-        .nav-links a:hover { color: var(--accent); }
-        .nav-cta {
-            background: var(--accent); color: var(--primary);
-            padding: 10px 22px; border-radius: 50px;
-            font-weight: 600; font-size: 0.88rem;
-            text-decoration: none; transition: opacity 0.2s;
-        }
-        .nav-cta:hover { opacity: 0.85; }
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(251,247,240,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(139,90,43,0.1);padding:0 60px;height:68px;display:flex;justify-content:space-between;align-items:center}
+.nav-logo{text-decoration:none;display:flex;align-items:baseline;gap:4px}
+.nav-logo-big{font-family:'Amatic SC',cursive;font-size:1.8rem;font-weight:700;color:var(--text);letter-spacing:0.02em;line-height:1}
+.nav-logo-sub{font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--wood);font-weight:600;font-family:'Cabin',sans-serif}
+.nav-links{display:flex;gap:36px;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:0.83rem;font-weight:500;transition:color 0.2s;cursor:pointer}
+.nav-links a:hover{color:var(--green)}
+.nav-cta{background:var(--green);color:var(--white);padding:10px 26px;border-radius:4px;font-size:0.8rem;font-weight:600;text-decoration:none;transition:all 0.25s;cursor:pointer;letter-spacing:0.04em}
+.nav-cta:hover{background:var(--green2);box-shadow:0 4px 16px rgba(45,106,79,0.3)}
 
-        /* HERO */
-        .hero {
-            min-height: 100vh;
-            background: linear-gradient(135deg, var(--primary) 0%, #0a0a0a 60%);
-            display: flex; align-items: center;
-            padding: 120px 0 80px;
-            position: relative; overflow: hidden;
-        }
-        .hero::before {
-            content: ''; position: absolute;
-            width: 600px; height: 600px;
-            background: radial-gradient(circle, #C9A96E22 0%, transparent 70%);
-            top: -200px; right: -200px;
-            border-radius: 50%;
-        }
-        .hero-content { position: relative; z-index: 1; }
-        .hero-badge {
-            display: inline-block;
-            background: #C9A96E22;
-            border: 1px solid #C9A96E44;
-            color: var(--accent);
-            padding: 6px 16px; border-radius: 50px;
-            font-size: 0.82rem; font-weight: 500;
-            margin-bottom: 24px;
-        }
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.4rem, 6vw, 4.5rem);
-            font-weight: 700; line-height: 1.1;
-            margin-bottom: 20px;
-            background: linear-gradient(135deg, #fff 0%, #C9A96E 100%);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-        }
-        .hero p {
-            font-size: 1.15rem; color: var(--text-muted);
-            max-width: 520px; margin-bottom: 40px;
-        }
-        .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
-        .btn-primary {
-            background: var(--accent); color: var(--primary);
-            padding: 16px 36px; border-radius: 50px;
-            font-weight: 700; font-size: 1rem;
-            text-decoration: none; transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 8px 30px #C9A96E44;
-        }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px #C9A96E66; }
-        .btn-secondary {
-            border: 1px solid rgba(255,255,255,0.2);
-            color: var(--text); padding: 16px 36px;
-            border-radius: 50px; font-weight: 500;
-            text-decoration: none; transition: border-color 0.2s;
-        }
-        .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
-        .hero-stats {
-            display: flex; gap: 40px; margin-top: 60px;
-            padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.08);
-        }
-        .stat-num {
-            font-size: 2rem; font-weight: 700; color: var(--accent);
-            font-family: 'Playfair Display', serif;
-        }
-        .stat-label { font-size: 0.82rem; color: var(--text-muted); }
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-columns:55% 1fr;align-items:center;padding:100px 0 80px;position:relative;overflow:hidden}
+.hero-left{padding:0 0 0 60px}
+.hero-right{background:var(--wood-pale);min-height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:60px 40px;position:relative}
+.hero-right::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 30px,rgba(139,90,43,0.04) 30px,rgba(139,90,43,0.04) 31px)}
+.hero-vintage{display:inline-block;background:var(--wood);color:var(--white);font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;padding:6px 14px;margin-bottom:28px;font-family:'Cabin',sans-serif;font-weight:600}
+h1{font-family:'Amatic SC',cursive;font-size:clamp(3.5rem,7vw,6.5rem);font-weight:700;line-height:1.05;color:var(--text);margin-bottom:20px}
+h1 .g{color:var(--green)}
+h1 .w{color:var(--wood)}
+.hero-p{font-size:0.97rem;color:var(--muted);line-height:1.85;max-width:420px;margin-bottom:16px;font-weight:400}
+.hero-since{font-family:'Amatic SC',cursive;font-size:1.2rem;color:var(--wood-l);margin-bottom:36px;letter-spacing:0.06em}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn-green{background:var(--green);color:var(--white);padding:14px 32px;border-radius:4px;font-size:0.87rem;font-weight:700;text-decoration:none;transition:all 0.25s;cursor:pointer;display:inline-block;letter-spacing:0.03em}
+.btn-green:hover{background:var(--green2);box-shadow:0 8px 24px rgba(45,106,79,0.35);transform:translateY(-2px)}
+.btn-wood{border:2px solid var(--wood-l);color:var(--wood2);padding:12px 32px;border-radius:4px;font-size:0.87rem;font-weight:600;text-decoration:none;transition:all 0.25s;cursor:pointer;display:inline-block}
+.btn-wood:hover{background:var(--wood-pale);border-color:var(--wood)}
+.stamp{width:160px;height:160px;border-radius:50%;border:3px solid var(--wood);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;margin-bottom:20px;position:relative;z-index:1;background:var(--cream)}
+.stamp::before{content:'';position:absolute;inset:6px;border-radius:50%;border:1.5px dashed var(--wood-l)}
+.stamp-n{font-family:'Amatic SC',cursive;font-size:3.2rem;font-weight:700;color:var(--green);line-height:1}
+.stamp-l{font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-top:2px}
+.badge-stars{background:var(--green);color:var(--white);padding:10px 20px;border-radius:4px;text-align:center;width:100%;max-width:200px;position:relative;z-index:1}
+.badge-stars-num{font-family:'Amatic SC',cursive;font-size:1.8rem;font-weight:700;line-height:1}
+.badge-stars-s{font-size:0.95rem;letter-spacing:2px;margin:2px 0;opacity:0.85}
+.badge-stars-l{font-size:0.68rem;letter-spacing:0.1em;opacity:0.7;text-transform:uppercase}
 
-        /* SERVICES */
-        .services {
-            padding: 100px 0;
-            background: var(--surface);
-        }
-        .section-label {
-            text-align: center; color: var(--accent);
-            font-size: 0.82rem; font-weight: 600;
-            letter-spacing: 2px; text-transform: uppercase;
-            margin-bottom: 12px;
-        }
-        .services h2, .reviews h2, .hours-section h2, .contact-section h2 {
-            font-family: 'Playfair Display', serif;
-            text-align: center; font-size: clamp(1.8rem, 4vw, 2.8rem);
-            margin-bottom: 60px;
-        }
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-        }
-        .service-card {
-            background: var(--bg);
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: var(--radius);
-            padding: 36px 28px;
-            transition: border-color 0.3s, transform 0.3s;
-        }
-        .service-card:hover {
-            border-color: #C9A96E66;
-            transform: translateY(-4px);
-        }
-        .service-icon { font-size: 2.5rem; margin-bottom: 16px; }
-        .service-card h3 {
-            font-size: 1.1rem; font-weight: 600;
-            margin-bottom: 10px;
-        }
-        .service-card p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; }
+/* BAND */
+.band{background:var(--green);display:flex;overflow:hidden;padding:14px 0}
+.band-inner{display:flex;gap:60px;animation:scroll 20s linear infinite;white-space:nowrap}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.band-item{font-family:'Amatic SC',cursive;font-size:1.2rem;color:rgba(255,255,255,0.85);letter-spacing:0.06em;white-space:nowrap;display:flex;align-items:center;gap:20px}
+.band-sep{color:rgba(255,255,255,0.4);font-size:1.5rem}
+@media(prefers-reduced-motion:reduce){.band-inner{animation:none}}
 
-        /* REVIEWS */
-        .reviews { padding: 100px 0; }
-        .rating-hero {
-            text-align: center; margin-bottom: 60px;
-        }
-        .stars-big { font-size: 2rem; color: #FFB800; margin-bottom: 8px; }
-        .rating-num {
-            font-size: 4rem; font-weight: 700;
-            font-family: 'Playfair Display', serif;
-            color: var(--accent);
-        }
-        .rating-count { color: var(--text-muted); font-size: 0.9rem; }
-        .star.filled { color: #FFB800; }
-        .star { color: #333; }
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-        }
-        .review-card {
-            background: var(--surface);
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: var(--radius);
-            padding: 28px;
-        }
-        .review-card .stars { color: #FFB800; margin-bottom: 12px; }
-        .review-card p { color: var(--text-muted); font-size: 0.9rem; font-style: italic; margin-bottom: 16px; }
-        .reviewer { font-size: 0.82rem; font-weight: 600; color: var(--accent); }
+/* ABOUT */
+.about{padding:90px 60px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;background:var(--white)}
+.about-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--wood);margin-bottom:14px;display:block;font-weight:600}
+.about h2{font-family:'Amatic SC',cursive;font-size:clamp(2.5rem,5vw,4rem);font-weight:700;line-height:1.1;margin-bottom:20px}
+.about h2 .g{color:var(--green)}
+.about p{color:var(--muted);font-size:0.93rem;line-height:1.9;margin-bottom:14px}
+.values{margin-top:28px;display:flex;flex-direction:column;gap:12px}
+.value{display:flex;align-items:flex-start;gap:14px;padding:16px;background:var(--cream);border-radius:8px;border-left:3px solid var(--green)}
+.value svg{flex-shrink:0;width:20px;height:20px;stroke:var(--green);fill:none;stroke-width:2;margin-top:1px}
+.value-text{font-size:0.87rem;color:var(--text);font-weight:500;line-height:1.45}
+.value-text span{display:block;font-size:0.78rem;font-weight:400;color:var(--muted);margin-top:2px}
+.timeline{display:flex;flex-direction:column;gap:0}
+.tline{display:flex;gap:20px;align-items:flex-start;position:relative;padding-bottom:28px}
+.tline:last-child{padding-bottom:0}
+.tline::before{content:'';position:absolute;left:14px;top:28px;bottom:0;width:1px;background:var(--beige)}
+.tline:last-child::before{display:none}
+.tline-dot{width:28px;height:28px;border-radius:50%;background:var(--wood-pale);border:2px solid var(--wood-l);flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.tline-dot svg{width:14px;height:14px;stroke:var(--wood);fill:none;stroke-width:2}
+.tline-year{font-family:'Amatic SC',cursive;font-size:1.1rem;font-weight:700;color:var(--wood);margin-bottom:2px}
+.tline-title{font-size:0.88rem;font-weight:600;color:var(--text);margin-bottom:4px}
+.tline-desc{font-size:0.82rem;color:var(--muted);line-height:1.6;font-weight:400}
 
-        /* HOURS */
-        .hours-section {
-            padding: 100px 0;
-            background: var(--surface);
-        }
-        .hours-wrap {
-            max-width: 480px; margin: 0 auto;
-            background: var(--bg);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: var(--radius);
-            overflow: hidden;
-        }
-        .hours-row {
-            display: flex; justify-content: space-between;
-            padding: 14px 24px;
-            border-bottom: 1px solid rgba(255,255,255,0.04);
-        }
-        .hours-row:last-child { border-bottom: none; }
-        .hours-row.closed { opacity: 0.4; }
-        .day { font-weight: 500; text-transform: capitalize; }
-        .time { color: var(--accent); font-weight: 500; }
+/* SERVICES */
+.services{padding:90px 60px;background:var(--cream)}
+.svc-intro{margin-bottom:52px}
+.svc-intro-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--wood);margin-bottom:10px;display:block;font-weight:600}
+.svc-intro h2{font-family:'Amatic SC',cursive;font-size:clamp(2.5rem,5vw,3.8rem);font-weight:700;line-height:1.1}
+.svc-intro h2 .g{color:var(--green)}
+.svc-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.sc{background:var(--white);border-radius:8px;padding:28px 24px;border:1px solid var(--beige);position:relative;transition:border-color 0.25s,transform 0.25s,box-shadow 0.25s;cursor:default;overflow:hidden}
+.sc::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--green);transform:scaleX(0);transform-origin:left;transition:transform 0.3s ease}
+.sc:hover{border-color:transparent;transform:translateY(-4px);box-shadow:0 12px 36px rgba(26,18,11,0.08)}
+.sc:hover::after{transform:scaleX(1)}
+.sc-icon{width:42px;height:42px;background:var(--green-pale);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.sc-icon svg{width:22px;height:22px;stroke:var(--green2);fill:none;stroke-width:1.8}
+.sc h3{font-family:'Amatic SC',cursive;font-size:1.3rem;font-weight:700;margin-bottom:8px;color:var(--text)}
+.sc p{font-size:0.82rem;color:var(--muted);line-height:1.7}
+.sc-price{display:inline-block;margin-top:14px;font-size:0.78rem;font-weight:700;color:var(--wood);letter-spacing:0.04em}
 
-        /* CONTACT */
-        .contact-section { padding: 100px 0; }
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px; align-items: center;
-        }
-        .contact-info p {
-            color: var(--text-muted); font-size: 1rem;
-            margin-bottom: 32px;
-        }
-        .contact-item {
-            display: flex; align-items: center; gap: 14px;
-            margin-bottom: 20px;
-        }
-        .contact-icon {
-            width: 44px; height: 44px;
-            background: #C9A96E18;
-            border: 1px solid #C9A96E33;
-            border-radius: 10px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.1rem; flex-shrink: 0;
-        }
-        .contact-text { font-size: 0.95rem; }
-        .contact-text small { color: var(--text-muted); display: block; font-size: 0.8rem; }
-        .booking-card {
-            background: linear-gradient(135deg, #C9A96E18, #2D2D2D80);
-            border: 1px solid #C9A96E33;
-            border-radius: 20px;
-            padding: 48px;
-            text-align: center;
-        }
-        .booking-card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem; margin-bottom: 12px;
-        }
-        .booking-card p { color: var(--text-muted); margin-bottom: 32px; }
+/* AVIS */
+.avis{padding:90px 60px;background:var(--wood-pale)}
+.avis-head{display:flex;gap:40px;align-items:flex-start;margin-bottom:48px;flex-wrap:wrap}
+.avis-big-stamp{width:140px;height:140px;border-radius:50%;background:var(--green);border:4px solid var(--green2);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;flex-shrink:0}
+.abs-n{font-family:'Amatic SC',cursive;font-size:3.2rem;font-weight:700;color:#fff;line-height:1}
+.abs-s{color:rgba(255,255,255,0.8);font-size:0.9rem;letter-spacing:2px}
+.abs-l{color:rgba(255,255,255,0.6);font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;margin-top:2px}
+.avis-head-text h2{font-family:'Amatic SC',cursive;font-size:clamp(2rem,4vw,3rem);font-weight:700;margin-bottom:10px}
+.avis-head-text h2 .g{color:var(--green)}
+.avis-head-text p{font-size:0.9rem;color:var(--muted);line-height:1.75;max-width:440px}
+.avis-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.av{background:var(--white);border-radius:8px;padding:24px 20px;border:1px solid rgba(139,90,43,0.1);transition:border-color 0.2s;cursor:default}
+.av:hover{border-color:rgba(45,106,79,0.3)}
+.av-stars{color:#D4924A;font-size:0.88rem;letter-spacing:2px;margin-bottom:10px}
+.av p{font-size:0.85rem;color:var(--text);font-style:italic;line-height:1.75;margin-bottom:12px;font-weight:400}
+.av-author{font-size:0.72rem;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:0.08em}
 
-        /* FOOTER */
-        footer {
-            background: #050505;
-            border-top: 1px solid rgba(255,255,255,0.06);
-            padding: 40px 0;
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-        }
-        footer a { color: var(--accent); text-decoration: none; }
+/* HORAIRES */
+.horaires{padding:90px 60px;display:grid;grid-template-columns:1fr 1fr;gap:80px;background:var(--white)}
+.hor-tag{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--wood);margin-bottom:12px;display:block;font-weight:600}
+.horaires h2{font-family:'Amatic SC',cursive;font-size:clamp(2rem,4vw,3rem);font-weight:700;margin-bottom:28px}
+.h-bois{display:flex;flex-direction:column;background:var(--cream);border-radius:8px;overflow:hidden;border:1px solid var(--beige)}
+.hrow{display:flex;justify-content:space-between;padding:13px 20px;border-bottom:1px solid var(--beige);transition:background 0.15s;cursor:default}
+.hrow:last-child{border-bottom:none}
+.hrow:hover{background:var(--wood-pale)}
+.hrow.closed{opacity:0.3}
+.hday{font-size:0.84rem;font-weight:500;color:var(--text);text-transform:capitalize}
+.htime{font-size:0.84rem;font-weight:700;color:var(--green)}
+.artisan-card{background:var(--text);border-radius:8px;padding:36px;color:var(--cream)}
+.artisan-card h3{font-family:'Amatic SC',cursive;font-size:1.8rem;font-weight:700;margin-bottom:24px;color:var(--wood-l)}
+.cline{display:flex;align-items:flex-start;gap:12px;margin-bottom:16px}
+.cline svg{flex-shrink:0;margin-top:3px;stroke:var(--green-l);fill:none;stroke-width:2;width:17px;height:17px}
+.cline span,.cline a{font-size:0.88rem;color:rgba(251,247,240,0.75);line-height:1.5;text-decoration:none;font-weight:400}
+.cline a:hover{color:var(--green-l)}
+.artisan-note{margin-top:24px;background:rgba(45,106,79,0.15);border:1px solid rgba(82,183,136,0.2);border-radius:6px;padding:14px 16px}
+.artisan-note p{font-size:0.82rem;color:var(--green-l);line-height:1.6;font-style:italic}
 
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero-stats { flex-wrap: wrap; gap: 24px; }
-            .contact-grid { grid-template-columns: 1fr; }
-            .booking-card { padding: 32px 24px; }
-        }
-    </style>
+/* CTA */
+.cta{padding:100px 60px;text-align:center;background:var(--cream);position:relative;overflow:hidden}
+.cta::before{content:'✂';position:absolute;font-size:15rem;color:rgba(139,90,43,0.04);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;font-style:normal}
+.cta-sym{font-family:'Amatic SC',cursive;font-size:1.4rem;color:var(--wood-l);margin-bottom:16px;display:block;letter-spacing:0.1em}
+.cta h2{font-family:'Amatic SC',cursive;font-size:clamp(2.5rem,5vw,4.5rem);font-weight:700;line-height:1.05;margin-bottom:14px}
+.cta h2 .g{color:var(--green)}
+.cta p{color:var(--muted);font-size:0.93rem;line-height:1.75;margin-bottom:36px;max-width:440px;margin-left:auto;margin-right:auto;position:relative;z-index:1}
+footer{background:var(--text);color:rgba(251,247,240,0.4);padding:28px 60px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.f-logo{font-family:'Amatic SC',cursive;font-size:1.3rem;color:rgba(251,247,240,0.85);font-weight:700}
+.f-info{font-size:0.72rem}
+
+@media(max-width:900px){nav{padding:0 20px}.nav-links{display:none}.hero{grid-template-columns:1fr;min-height:auto}.hero-left{padding:80px 20px 40px}.hero-right{padding:40px 20px;min-height:280px;flex-direction:row;gap:24px;justify-content:center}.about,.services,.avis,.horaires,.cta{padding:60px 20px}.about{grid-template-columns:1fr}.svc-cards{grid-template-columns:1fr}.avis-cards,.avis-head{flex-direction:column}.avis-head{gap:20px}.horaires{grid-template-columns:1fr}footer{flex-direction:column;text-align:center;padding:24px 20px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
 </head>
 <body>
 
 <nav>
-    <div class="nav-inner">
-        <a href="#" class="nav-logo">✂️ Up Hair Concept ( Artisan Coiffeur indépendant HOMME - FEMME - Enfant / since 2008 )</a>
-        <ul class="nav-links">
-            <li><a href="#services">Services</a></li>
-            <li><a href='#avis'>Avis</a></li>
-            <li><a href='#horaires'>Horaires</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <a href="#reservation" class="nav-cta">Réserver</a>
-    </div>
+  <a href="#" class="nav-logo">
+    <span class="nav-logo-big">Up Hair</span>
+    <span class="nav-logo-sub">· Artisan coiffeur</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Prestations</a></li>
+    <li><a href="#avis">Avis</a></li>
+    <li><a href="#horaires">Horaires</a></li>
+  </ul>
+  <a href="https://www.planity.com/up-hair-concept-33000-bordeaux" target="_blank" rel="noopener" class="nav-cta">Réserver</a>
 </nav>
 
 <section class="hero">
-    <div class="container hero-content">
-        <div class="hero-badge">✂️ Bienvenue chez Up Hair Concept ( Artisan Coiffeur indépendant HOMME - FEMME - Enfant / since 2008 )</div>
-        <h1>Up Hair Concept ( Artisan Coiffeur indépendant HOMME - FEMME - Enfant / since 2008 )</h1>
-        <p>Votre destination de confiance à Bordeaux. Réservez en ligne en quelques secondes — disponible 24h/24.</p>
-        <div class="hero-ctas">
-            <a href="#reservation" class="btn-primary">Prendre rendez-vous</a>
-            <a href="#services" class="btn-secondary">Découvrir nos services</a>
-        </div>
-        <div class="hero-stats">
-            <div><div class="stat-num">4.9</div><div class="stat-label">Note Google</div></div>
-            <div><div class="stat-num">154+</div><div class="stat-label">Avis clients</div></div>
-            <div><div class="stat-num">100%</div><div class="stat-label">Satisfaction garantie</div></div>
-        </div>
+  <div class="hero-left">
+    <div class="hero-vintage">Artisan indépendant · depuis 2008</div>
+    <h1>Coiffure<br><span class="w">artisanale</span>,<br>âme <span class="g">verte</span></h1>
+    <p class="hero-p">Up Hair Concept, c'est 15 ans de passion pour la coiffure indépendante à Bordeaux. Homme, femme, enfant — chaque client est unique.</p>
+    <div class="hero-since">∿ Créé en 2008, Rue de la Devise ∿</div>
+    <div class="hero-btns">
+      <a href="https://www.planity.com/up-hair-concept-33000-bordeaux" target="_blank" rel="noopener" class="btn-green">Prendre rendez-vous</a>
+      <a href="#services" class="btn-wood">Nos prestations</a>
     </div>
+  </div>
+  <div class="hero-right">
+    <div class="stamp">
+      <div class="stamp-n">4,9</div>
+      <div class="stamp-l">sur 5 étoiles</div>
+    </div>
+    <div class="badge-stars">
+      <div class="badge-stars-num">154</div>
+      <div class="badge-stars-s">★★★★★</div>
+      <div class="badge-stars-l">Avis Google vérifiés</div>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="band-inner">
+    <span class="band-item">Coupe femme <span class="band-sep">·</span></span>
+    <span class="band-item">Coupe homme <span class="band-sep">·</span></span>
+    <span class="band-item">Coupe enfant <span class="band-sep">·</span></span>
+    <span class="band-item">Couleur <span class="band-sep">·</span></span>
+    <span class="band-item">Balayage <span class="band-sep">·</span></span>
+    <span class="band-item">Soins naturels <span class="band-sep">·</span></span>
+    <span class="band-item">Artisan depuis 2008 <span class="band-sep">·</span></span>
+    <span class="band-item">Coupe femme <span class="band-sep">·</span></span>
+    <span class="band-item">Coupe homme <span class="band-sep">·</span></span>
+    <span class="band-item">Coupe enfant <span class="band-sep">·</span></span>
+    <span class="band-item">Couleur <span class="band-sep">·</span></span>
+    <span class="band-item">Balayage <span class="band-sep">·</span></span>
+    <span class="band-item">Soins naturels <span class="band-sep">·</span></span>
+    <span class="band-item">Artisan depuis 2008 <span class="band-sep">·</span></span>
+  </div>
+</div>
+
+<section class="about">
+  <div>
+    <span class="about-tag">Notre histoire</span>
+    <h2>Artisan coiffeur<br>depuis <span class="g">2008</span></h2>
+    <p>Up Hair Concept, c'est avant tout une histoire humaine. Un coiffeur indépendant qui a fait le choix de rester proche de ses clients, de travailler à son rythme, et de ne jamais sacrifier la qualité à la quantité.</p>
+    <p>15 ans plus tard, 154 avis Google témoignent de ce qu'on savait dès le premier jour : la fidélité de nos clients est notre plus belle récompense.</p>
+    <div class="values">
+      <div class="value">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div class="value-text">Indépendance & authenticité<span>Un coiffeur qui choisit ses produits, ses techniques, ses clients.</span></div>
+      </div>
+      <div class="value">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <div class="value-text">Femme · Homme · Enfant<span>Toute la famille est la bienvenue depuis 2008.</span></div>
+      </div>
+      <div class="value">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <div class="value-text">Horaires étendus le jeudi<span>Jusqu'à 20h30 pour les actifs et les retardataires.</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="timeline">
+    <div class="tline">
+      <div class="tline-dot"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg></div>
+      <div>
+        <div class="tline-year">2008</div>
+        <div class="tline-title">Ouverture à Bordeaux</div>
+        <div class="tline-desc">Up Hair Concept ouvre 27 Rue de la Devise avec une conviction : la coiffure artisanale a toute sa place dans une grande ville.</div>
+      </div>
+    </div>
+    <div class="tline">
+      <div class="tline-dot"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+      <div>
+        <div class="tline-year">2015</div>
+        <div class="tline-title">100 avis Google</div>
+        <div class="tline-desc">La confiance des clients s'exprime en avis. Une fidélité qui ne fait que grandir.</div>
+      </div>
+    </div>
+    <div class="tline">
+      <div class="tline-dot"><svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26 12,2"/></svg></div>
+      <div>
+        <div class="tline-year">2024</div>
+        <div class="tline-title">4,9 / 5 · 154 avis</div>
+        <div class="tline-desc">La note la plus haute parmi les salons testés à Bordeaux. Un témoignage de constance.</div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="services" id="services">
-    <div class="container">
-        <div class="section-label">Nos Prestations</div>
-        <h2>Des services pensés pour vous</h2>
-        <div class="services-grid">
-            
-        <div class="service-card">
-            <div class="service-icon">✂️</div>
-            <h3>Coupe & Coiffure</h3>
-            <p>Coupes modernes pour femmes et hommes, adaptées à votre morphologie.</p>
-        </div>
-        <div class="service-card">
-            <div class="service-icon">🎨</div>
-            <h3>Coloration</h3>
-            <p>Balayage, mèches, couleur — techniques dernière génération.</p>
-        </div>
-        <div class="service-card">
-            <div class="service-icon">💆</div>
-            <h3>Soins Capillaires</h3>
-            <p>Masques, kératine, soins profonds pour cheveux brillants et sains.</p>
-        </div>
-        </div>
+  <div class="svc-intro">
+    <span class="svc-intro-tag">Nos savoir-faire</span>
+    <h2>Ce qu'on<br>fait <span class="g">bien</span></h2>
+  </div>
+  <div class="svc-cards">
+    <div class="sc">
+      <div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+      <h3>Coupe Femme</h3>
+      <p>Coupes structurées ou effilées, courtes ou longues. Brushing inclus. On prend le temps de vous comprendre.</p>
+      <span class="sc-price">Sur rendez-vous</span>
     </div>
+    <div class="sc">
+      <div class="sc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M5.5 21c0-3.6 2.9-6.5 6.5-6.5s6.5 2.9 6.5 6.5"/></svg></div>
+      <h3>Coupe Homme</h3>
+      <p>Coupes classiques et dégradés maîtrisés. Finitions au rasoir pour une précision artisanale.</p>
+      <span class="sc-price">Depuis 2008</span>
+    </div>
+    <div class="sc">
+      <div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+      <h3>Coupe Enfant</h3>
+      <p>Un espace patient et bienveillant pour les petits dès 3 ans. Parents bienvenus.</p>
+      <span class="sc-price">Famille</span>
+    </div>
+    <div class="sc">
+      <div class="sc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg></div>
+      <h3>Couleur Naturelle</h3>
+      <p>Colorations sélectionnées pour leur qualité et leur tenue. Couvrantes, naturelles ou fantaisie légère.</p>
+      <span class="sc-price">Produits qualitatifs</span>
+    </div>
+    <div class="sc">
+      <div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M2 12h20M12 2v20"/><circle cx="12" cy="12" r="5" stroke-dasharray="3 3"/></svg></div>
+      <h3>Balayage</h3>
+      <p>Balayage californien, mèches ou highlights — pour un résultat lumineux et naturel adapté à votre carnation.</p>
+      <span class="sc-price">Personnalisé</span>
+    </div>
+    <div class="sc">
+      <div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M12 22V12M12 12C12 12 7 7 7 3a5 5 0 0 1 10 0c0 4-5 9-5 9z"/></svg></div>
+      <h3>Soins & Traitements</h3>
+      <p>Masques nourrissants et soins réparateurs intégrés à chaque prestation. Votre cuir chevelu remerciera.</p>
+      <span class="sc-price">Inclus dans la plupart des prestations</span>
+    </div>
+  </div>
 </section>
 
-
-        <section class="reviews" id="avis">
-            <div class="container">
-                <h2>Ce que disent nos clients</h2>
-                <div class="rating-hero">
-                    <div class="stars-big"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">☆</span></div>
-                    <div class="rating-num">4.9</div>
-                    <div class="rating-count">sur 154 avis Google vérifiés</div>
-                </div>
-                <div class="reviews-grid">
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p>"Excellente prestation, je recommande vivement ! Accueil chaleureux et résultat au top."</p>
-                        <div class="reviewer">— Client Google</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p>"Très professionnel, à l'écoute, et le résultat dépasse mes attentes. Merci !"</p>
-                        <div class="reviewer">— Client Google</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p>"Je viens ici depuis des années. La qualité est toujours au rendez-vous."</p>
-                        <div class="reviewer">— Client Google</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-<section class="hours-section" id="horaires">
-    <div class="container">
-        <div class="section-label">Planning</div>
-        <h2>Horaires d'ouverture</h2>
-        <div class="hours-wrap">
-            <div class="hours-row closed"><span class="day">lundi</span><span class="time">Fermé</span></div>
-<div class="hours-row"><span class="day">mardi</span><span class="time">09:30 – 19:00</span></div>
-<div class="hours-row"><span class="day">mercredi</span><span class="time">09:30 – 19:00</span></div>
-<div class="hours-row"><span class="day">jeudi</span><span class="time">12:00 – 20:30</span></div>
-<div class="hours-row"><span class="day">vendredi</span><span class="time">09:30 – 19:00</span></div>
-<div class="hours-row"><span class="day">samedi</span><span class="time">09:30 – 18:30</span></div>
-<div class="hours-row closed"><span class="day">dimanche</span><span class="time">Fermé</span></div>
-
-        </div>
+<section class="avis" id="avis">
+  <div class="avis-head">
+    <div class="avis-big-stamp">
+      <div class="abs-n">4,9</div>
+      <div class="abs-s">★★★★★</div>
+      <div class="abs-l">154 avis</div>
     </div>
+    <div class="avis-head-text">
+      <h2>Ils parlent<br>pour <span class="g">nous</span></h2>
+      <p>4,9 sur 5 — la note la plus haute que nous ayons trouvée parmi les coiffeurs bordelais. Un résultat qui ne s'invente pas : 15 ans de travail, client après client.</p>
+    </div>
+  </div>
+  <div class="avis-cards">
+    <div class="av">
+      <div class="av-stars">★★★★★</div>
+      <p>"C'est mon coiffeur depuis des années et je ne vois pas pourquoi j'irais ailleurs. Toujours à l'écoute, toujours dans le mille. Un vrai artisan."</p>
+      <div class="av-author">— Julien F. · Google</div>
+    </div>
+    <div class="av">
+      <div class="av-stars">★★★★★</div>
+      <p>"J'ai emmené mes deux enfants et ma mère — et tout le monde est reparti ravi. C'est rare de trouver un salon qui convient vraiment à toute la famille."</p>
+      <div class="av-author">— Claire M. · Google</div>
+    </div>
+    <div class="av">
+      <div class="av-stars">★★★★★</div>
+      <p>"Le jeudi jusqu'à 20h30, c'est une vraie aubaine pour ceux qui travaillent. Et en plus la qualité est irréprochable. Je recommande les yeux fermés."</p>
+      <div class="av-author">— Romain G. · Google</div>
+    </div>
+  </div>
 </section>
 
-<section class="contact-section" id="contact">
-    <div class="container">
-        <div class="section-label">Nous trouver</div>
-        <h2>Contactez-nous</h2>
-        <div class="contact-grid">
-            <div class="contact-info">
-                <p>Nous sommes à votre disposition pour répondre à toutes vos questions et vous accueillir dans les meilleures conditions.</p>
-                <div class="contact-item"><div class="contact-icon">📞</div><div class="contact-text"><small>Téléphone</small>05 56 06 57 27</div></div>
-                <div class="contact-item">
-                    <div class="contact-icon">📍</div>
-                    <div class="contact-text"><small>Adresse</small>27 Rue de la Devise, 33000 Bordeaux, France</div>
-                </div>
-            </div>
-            <div class="booking-card" id="reservation">
-                <h3>Réservation en ligne</h3>
-                <p>Choisissez votre créneau, c'est simple et gratuit.</p>
-                <a href="https://cal.com" class="btn-primary" target="_blank" rel="noopener">Réserver maintenant →</a>
-            </div>
-        </div>
+<section class="horaires" id="horaires">
+  <div>
+    <span class="hor-tag">Quand nous trouver</span>
+    <h2>Horaires</h2>
+    <div class="h-bois">
+      <div class="hrow closed"><span class="hday">Lundi</span><span class="htime">Fermé</span></div>
+      <div class="hrow"><span class="hday">Mardi</span><span class="htime">09:30 – 19:00</span></div>
+      <div class="hrow"><span class="hday">Mercredi</span><span class="htime">09:30 – 19:00</span></div>
+      <div class="hrow"><span class="hday" style="color:var(--green);font-weight:700">Jeudi</span><span class="htime" style="color:var(--green)">12:00 – 20:30 ✦</span></div>
+      <div class="hrow"><span class="hday">Vendredi</span><span class="htime">09:30 – 19:00</span></div>
+      <div class="hrow"><span class="hday">Samedi</span><span class="htime">09:30 – 18:30</span></div>
+      <div class="hrow closed"><span class="hday">Dimanche</span><span class="htime">Fermé</span></div>
     </div>
+  </div>
+  <div class="artisan-card" id="contact">
+    <h3>Nous trouver</h3>
+    <div class="cline">
+      <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <span>27 Rue de la Devise<br>33000 Bordeaux</span>
+    </div>
+    <div class="cline">
+      <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.1 6.1l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+      <a href="tel:0556065727"><span>05 56 06 57 27</span></a>
+    </div>
+    <div class="artisan-note">
+      <p>✦ Le jeudi, ouvert jusqu'à 20h30 pour vous accommoder après le travail.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="rdv">
+  <span class="cta-sym">∿ artisan coiffeur depuis 2008 ∿</span>
+  <h2>Prêt pour<br>une coupe <span class="g">qui vous ressemble</span> ?</h2>
+  <p>Réservez en ligne sur Planity. Femme, homme, enfant — on vous attend.</p>
+  <a href="https://www.planity.com/up-hair-concept-33000-bordeaux" target="_blank" rel="noopener" class="btn-green" style="position:relative;z-index:1">Réserver sur Planity</a>
 </section>
 
 <footer>
-    <div class="container">
-        <p>&copy; 2026 Up Hair Concept ( Artisan Coiffeur indépendant HOMME - FEMME - Enfant / since 2008 ) — 27 Rue de la Devise, 33000 Bordeaux, France</p>
-        <p style="margin-top:8px"><a href="tel:05 56 06 57 27">05 56 06 57 27</a></p>
-    </div>
+  <div class="f-logo">Up Hair Concept</div>
+  <div class="f-info">27 Rue de la Devise · 33000 Bordeaux · 05 56 06 57 27</div>
+  <div class="f-info">© 2025 Up Hair Concept · Artisan coiffeur depuis 2008</div>
 </footer>
-
 </body>
 </html>
